@@ -1,6 +1,6 @@
 #!/bin/bash
-cale=/home/g05cpirv/loguri/health_check_MDA
-filename=/home/g05cpirv/bin/lista
+cale=~/health_check_MDA
+filename=~/bin/lista
 cpnnode=(`cat "$filename"`)
 date > $cale
 echo >> $cale
