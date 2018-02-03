@@ -17,15 +17,15 @@ echo "pentru m-read-rec-ind -->6"
 echo -n "->>"
 read optiunezr2
 case $optiunezr2 in
-1) tail -1200 /var/log/simple-emmp.log | egrep ERROR\|'5[0-9][0-9]'$   | grep m-send-req;;
-2) tail -1200 /var/log/emmp.log | egrep "Unable To Send"\|"Message Not Sent"\|"Message Failed Invalid Sender" | grep m-send-conf;;
-3) tail -1200 /var/log/simple-emmp.log | grep '5[0-9][0-9]'$  | grep GET;;
-4) tail -1200 /var/log/simple-emmp.log | grep '5[0-9][0-9]'$  | grep m-notifyresp-ind;;
-5) tail -1200 /var/log/simple-emmp.log | grep '5[0-9][0-9]'$  | grep m-acknowledge-ind;;
-6) tail -1200 /var/log/simple-emmp.log | grep '5[0-9][0-9]'$  | grep m-read-rec-ind;;
+1) tail -1200 log1 | egrep ERROR\|'5[0-9][0-9]'$   | grep m-send-req;;
+2) tail -1200 log2 | egrep "Unable To Send"\|"Message Not Sent"\|"Message Failed Invalid Sender" | grep m-send-conf;;
+3) tail -1200 log1 | grep '5[0-9][0-9]'$  | grep GET;;
+4) tail -1200 log1 | grep '5[0-9][0-9]'$  | grep m-notifyresp-ind;;
+5) tail -1200 log1 | grep '5[0-9][0-9]'$  | grep m-acknowledge-ind;;
+6) tail -1200 log1 | grep '5[0-9][0-9]'$  | grep m-read-rec-ind;;
 esac;;
-2) tail -1200  /var/log/maillog/maillog | grep Deferred;
-tail -1200 /var/log/maillog/maillog | grep "Service unavailable" | grep -v mms.mnc005.mcc202.gprs;;
+2) tail -1200  international_logs | grep Deferred;
+tail -1200 international_logs | grep "Service unavailable" | grep -v mms.xxxx.gprs;;
 3) echo "WIND -->1"
    echo "COSMOTE -->2"
    echo "AICENT -->3"
@@ -33,15 +33,15 @@ tail -1200 /var/log/maillog/maillog | grep "Service unavailable" | grep -v mms.m
    echo -n "->>"
 read optiunezr4
 case $optiunezr4 in
-1) telnet 212.152.85.211 25 ;;
-2) telnet 195.167.65.220 25 ;;
-3) telnet 64.124.233.174 25 ;;
-4) telnet 85.205.200.37 25;;
+1) telnet xxx.xx.xx.xx 25 ;;
+2) telnet xxx.xxx.xx.xxx 25 ;;
+3) telnet xx.xx.xxx.xxx 25 ;;
+4) telnet xx.xxx.xxx.xx 25;;
 esac;;
 4)echo -n "Transaction ID / MSISDN : "
 read TID
-cat /var/log/simple-emmp.log | grep $TID;
-cat /var/log/emmp.log | grep $TID
+cat log1 | grep $TID;
+cat log2 | grep $TID
 ;;
 5)
 echo "=========================================================";;
