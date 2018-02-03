@@ -5,10 +5,10 @@ echo "BalanceInquiry&Recharge -->3"
 echo -n "->>"
 read optiunezr
 case $optiunezr in
-1)  ultim=`ls -t /exomi/log/PwdRetrieval/ | head -1`;
-        tail -200f /exomi/log/PwdRetrieval/$ultim;;
-2)ultim=`ls -t /exomi/log/credit_extensionNEW_log/ | head -1`;
-        tail -200f /exomi/log/credit_extensionNEW_log/$ultim;;
-3) ultim=`ls -t /exomi/log/prepaybalance/ | head -1`;
-        tail -200f /exomi/log/prepaybalance/$ultim;;
+1)  ultim=`ls -t pwdlogs | head -1`;
+        tail -200f pwdlogs/$ultim;;
+2)ultim=`ls -t creditlogs | head -1`;
+        tail -200f creditlogs/$ultim;;
+3) ultim=`ls -t balancelogs | head -1`;
+        tail -200f balancelogs/$ultim;;
 esac
