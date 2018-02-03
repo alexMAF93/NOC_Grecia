@@ -1,7 +1,7 @@
  #!/bin/bash
-filename=/home/g05cpirv/bin/lista
+filename=~/lista
 cpnnode=(`cat "$filename"`)
-cale=/home/g05cpirv/loguri/health_check_Card
+cale=~/health_check_Card
 date > $cale
 echo >> $cale
 echo
@@ -15,9 +15,9 @@ echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >>$cale
 
 (echo open "${cpnnode[$i]}"
 sleep 1
-echo g05gpoal
+echo aaaa
 sleep 1
-echo Vodafone1!
+echo xxxx
 sleep 1
 echo show card detail
 sleep 1
