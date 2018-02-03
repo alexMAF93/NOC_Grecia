@@ -2,8 +2,8 @@
 GREEN='\033[0;32m'
 RED='\033[4;7;31m'
 NC='\033[0m'
-cale1='/scripts/logs/pgw.log'
-cale2='/opt/cemf/local/scripturi/vfroo'
+cale1='logs'
+cale2='output'
 
 a1=`tail -57 $cale1 | head -55 | grep -ci 'All Disks & Mirrors are OK'`
 a2=`tail -57 $cale1 | head -55 | grep -ci 'Filesystem ok'`
