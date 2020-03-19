@@ -1,18 +1,15 @@
 #!/bin/bash
 cale=~/health_check_MDA
-filename=~/bin/lista
-cpnnode=(`cat "$filename"`)
+filename=~/lista
+# cpnnode=(`cat "$filename"`)
 date > $cale
-echo >> $cale
-echo
-echo
-echo
+printf '\n\n\n\n' >> $cale
 
 
-for i in {0..50}
+for i in `cat $filename`
 do
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >>$cale
-(echo open "${cpnnode[$i]}"
+(echo open "${i}"
 sleep 1
 echo aaaa
 sleep 1
