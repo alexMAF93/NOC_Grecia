@@ -9,7 +9,7 @@ echo >> $cale
 printf '\n\n\n'
 
 
-for i in `cat $filename | wc -l`
+for i in {0..54}
 do
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >>$cale
 
