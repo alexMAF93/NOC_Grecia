@@ -2,18 +2,18 @@
 
 
 filename=~/lista
-cpnnode=(`cat "$filename"`)
+# cpnnode=(`cat "$filename"`)
 cale=~/health_check_Card
 date > $cale
 echo >> $cale
-printf '\n\n\n'
+printf '\n\n\n' >> $cale
 
 
-for i in {0..54}
+for i in `cat $filename`
 do
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >>$cale
 
-    (echo open "${cpnnode[$i]}"
+    (echo open "${i}"
     sleep 1 
     echo aaaa
     sleep 1
